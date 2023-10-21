@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_card_cards",
+  "info": {
+    "displayName": "Card",
+    "icon": "calendar",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Active",
+        "Completed",
+        "Failed"
+      ]
+    },
+    "Image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "image.image"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "admin::user"
+    }
+  }
+}
